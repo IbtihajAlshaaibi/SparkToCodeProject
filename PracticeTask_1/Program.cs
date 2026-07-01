@@ -102,26 +102,48 @@
 
             //Task 6 - Temperature Converter
 
-            Console.Write("Enter the temperature in Celsius: ");
-            double celsius = double.Parse(Console.ReadLine());
+            //Console.Write("Enter the temperature in Celsius: ");
+            //double celsius = double.Parse(Console.ReadLine());
 
-            double fahrenheit = (celsius * 9 / 5) + 32;
+            //double fahrenheit = (celsius * 9 / 5) + 32;
 
-            Console.WriteLine("Temperature in Fahrenheit = " + fahrenheit);
+            //Console.WriteLine("Temperature in Fahrenheit = " + fahrenheit);
 
-            if (celsius < 10)
+            //if (celsius < 10)
+            //{
+            //    Console.WriteLine("Weather: Cold");
+            //}
+            //else if (celsius <= 30)
+            //{
+            //    Console.WriteLine("Weather: Mild");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Weather: Hot");
+            //}
+
+            ///////////////////////////////////////////////////////////////////////////
+
+            //Task 7 - Movie Ticket Pricing
+
+            Console.Write("Enter your age: ");
+            int age = int.Parse(Console.ReadLine());
+
+            if (age >= 0 && age <= 12)
             {
-                Console.WriteLine("Weather: Cold");
+                Console.WriteLine("Category: Child");
+                Console.WriteLine("Ticket Price: 2.000 OMR");
             }
-            else if (celsius <= 30)
+            else if (age >= 13 && age <= 59)
             {
-                Console.WriteLine("Weather: Mild");
+                Console.WriteLine("Category: Adult");
+                Console.WriteLine("Ticket Price: 5.000 OMR");
             }
             else
             {
-                Console.WriteLine("Weather: Hot");
+                Console.WriteLine("Category: Senior");
+                Console.WriteLine("Ticket Price: 3.000 OMR");
             }
-
 
 
         }
