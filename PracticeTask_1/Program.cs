@@ -270,104 +270,141 @@
 
                     // Task 11 - Loan Eligibility System
 
-                    Console.Write("Enter your age: ");
-                    int age = int.Parse(Console.ReadLine());
+                    //Console.Write("Enter your age: ");
+                    //int age = int.Parse(Console.ReadLine());
 
-                    Console.Write("Enter your monthly income : ");
-                    double income = double.Parse(Console.ReadLine());
+                    //Console.Write("Enter your monthly income : ");
+                    //double income = double.Parse(Console.ReadLine());
 
-                    Console.Write("Do you have an existing loan? (yes/no): ");
-                    string answer = Console.ReadLine();
+                    //Console.Write("Do you have an existing loan? (yes/no): ");
+                    //string answer = Console.ReadLine();
 
-                    bool hasLoan = (answer == "yes");
+                    //bool hasLoan = (answer == "yes");
 
-                    if (age >= 21 && age <= 60 && income >= 400 && !hasLoan)
-                    {
-                        Console.WriteLine("You are eligible for the personal loan");
-                    }
-                    else
-                    {
-                        if (age < 21 || age > 60)
-                        {
-                            Console.WriteLine("Not eligible: Age out of range");
-                        }
-                        else if (income < 400)
-                        {
-                            Console.WriteLine("Not eligible: Income is too low");
-                        }
-                        else if (hasLoan)
-                        {
-                            Console.WriteLine("Not eligible: You already have an existing loan");
-                        }
+                    //if (age >= 21 && age <= 60 && income >= 400 && !hasLoan)
+                    //{
+                    //    Console.WriteLine("You are eligible for the personal loan");
+                    //}
+                    //else
+                    //{
+                    //    if (age < 21 || age > 60)
+                    //    {
+                    //        Console.WriteLine("Not eligible: Age out of range");
+                    //    }
+                    //    else if (income < 400)
+                    //    {
+                    //        Console.WriteLine("Not eligible: Income is too low");
+                    //    }
+                    //    else if (hasLoan)
+                    //    {
+                    //        Console.WriteLine("Not eligible: You already have an existing loan");
+                    //    }
 
 
-                    }
+                    //}
 
                     ///////////////////////////////////////////////////////////////////////////
 
                     // Task 12 - Shipping Cost Calculator
 
-                    Console.Write("Enter region code (A, B, C): ");
-                    char region = char.Parse(Console.ReadLine());
+                    //Console.Write("Enter region code (A, B, C): ");
+                    //char region = char.Parse(Console.ReadLine());
 
-                    Console.Write("Enter package weight (kg): ");
-                    double weight = double.Parse(Console.ReadLine());
+                    //Console.Write("Enter package weight (kg): ");
+                    //double weight = double.Parse(Console.ReadLine());
 
-                    double baseCost = 0;
-                    double extraCharge = 0;
-                    double totalCost = 0;
+                    //double baseCost = 0;
+                    //double extraCharge = 0;
+                    //double totalCost = 0;
 
-                    switch (region)
+                    //switch (region)
+                    //{
+                    //    case 'A':
+                    //        baseCost = 1.000;
+
+                    //        if (weight > 10)
+                    //            extraCharge = 5.000;
+                    //        else if (weight > 5)
+                    //            extraCharge = 2.000;
+
+                    //        totalCost = baseCost + extraCharge;
+
+                    //        Console.WriteLine("Base Cost = " + baseCost + " OMR");
+                    //        Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
+                    //        Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
+                    //        break;
+
+                    //    case 'B':
+                    //        baseCost = 3.000;
+
+                    //        if (weight > 10)
+                    //            extraCharge = 5.000;
+                    //        else if (weight > 5)
+                    //            extraCharge = 2.000;
+
+                    //        totalCost = baseCost + extraCharge;
+
+                    //        Console.WriteLine("Base Cost = " + baseCost + " OMR");
+                    //        Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
+                    //        Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
+                    //        break;
+
+                    //    case 'C':
+                    //        baseCost = 7.000;
+
+                    //        if (weight > 10)
+                    //            extraCharge = 5.000;
+                    //        else if (weight > 5)
+                    //            extraCharge = 2.000;
+
+                    //        totalCost = baseCost + extraCharge;
+
+                    //        Console.WriteLine("Base Cost = " + baseCost + " OMR");
+                    //        Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
+                    //        Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
+                    //        break;
+
+                    //    default:
+                    //        Console.WriteLine("Invalid region");
+                    //        break;
+                    //}
+
+                    ///////////////////////////////////////////////////////////////////////////
+
+                    // Task 13 - Triangle Type Classifier
+
+                    Console.Write("Enter the first side: ");
+                    double side1 = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter the second side: ");
+                    double side2 = double.Parse(Console.ReadLine());
+
+                    Console.Write("Enter the third side: ");
+                    double side3 = double.Parse(Console.ReadLine());
+
+                    if (side1 + side2 > side3 &&
+                        side1 + side3 > side2 &&
+                        side2 + side3 > side1)
                     {
-                        case 'A':
-                            baseCost = 1.000;
-
-                            if (weight > 10)
-                                extraCharge = 5.000;
-                            else if (weight > 5)
-                                extraCharge = 2.000;
-
-                            totalCost = baseCost + extraCharge;
-
-                            Console.WriteLine("Base Cost = " + baseCost + " OMR");
-                            Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
-                            Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
-                            break;
-
-                        case 'B':
-                            baseCost = 3.000;
-
-                            if (weight > 10)
-                                extraCharge = 5.000;
-                            else if (weight > 5)
-                                extraCharge = 2.000;
-
-                            totalCost = baseCost + extraCharge;
-
-                            Console.WriteLine("Base Cost = " + baseCost + " OMR");
-                            Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
-                            Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
-                            break;
-
-                        case 'C':
-                            baseCost = 7.000;
-
-                            if (weight > 10)
-                                extraCharge = 5.000;
-                            else if (weight > 5)
-                                extraCharge = 2.000;
-
-                            totalCost = baseCost + extraCharge;
-
-                            Console.WriteLine("Base Cost = " + baseCost + " OMR");
-                            Console.WriteLine("Extra Charge = " + extraCharge + " OMR");
-                            Console.WriteLine("Total Shipping Cost = " + totalCost + " OMR");
-                            break;
-
-                        default:
-                            Console.WriteLine("Invalid region");
-                            break;
+                        if (side1 == side2 && side2 == side3)
+                        {
+                            Console.WriteLine("Triangle Type: Equilateral");
+                        }
+                        else if (side1 == side2 || side1 == side3 || side2 == side3)
+                        {
+                            Console.WriteLine("Triangle Type: Isosceles");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Triangle Type: Scalene");
+                        }
                     }
+                    else
+                    {
+                        Console.WriteLine("The sides do not form a valid triangle");
+                    }
+
+
+            }
         }
-    }
 }
