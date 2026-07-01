@@ -54,7 +54,7 @@
 
             //Console.Write("Do you have a valid national ID? (yes/no): ");
             //string answer = Console.ReadLine();
-            
+
             //if (age >= 18 && answer == "yes")
             //{
             //    Console.WriteLine("You are eligible to vote");
@@ -67,37 +67,63 @@
             ///////////////////////////////////////////////////////////////////////////
 
             //Task 5 - Grade Letter Lookup
-            Console.Write("Enter your grade (A, B, C, D, F): ");
-            char grade = char.Parse(Console.ReadLine());
 
-            switch (grade)
+            //Console.Write("Enter your grade (A, B, C, D, F): ");
+            //char grade = char.Parse(Console.ReadLine());
+
+            //switch (grade)
+            //{
+            //    case 'A':
+            //        Console.WriteLine("Excellent");
+            //        break;
+
+            //    case 'B':
+            //        Console.WriteLine("Very Good");
+            //        break;
+
+            //    case 'C':
+            //        Console.WriteLine("Good");
+            //        break;
+
+            //    case 'D':
+            //        Console.WriteLine("Pass");
+            //        break;
+
+            //    case 'F':
+            //        Console.WriteLine("Fail");
+            //        break;
+
+            //    default:
+            //        Console.WriteLine("Invalid grade");
+            //        break;
+            //}
+
+            ///////////////////////////////////////////////////////////////////////////
+
+            //Task 6 - Temperature Converter
+
+            Console.Write("Enter the temperature in Celsius: ");
+            double celsius = double.Parse(Console.ReadLine());
+
+            double fahrenheit = (celsius * 9 / 5) + 32;
+
+            Console.WriteLine("Temperature in Fahrenheit = " + fahrenheit);
+
+            if (celsius < 10)
             {
-                case 'A':
-                    Console.WriteLine("Excellent");
-                    break;
-
-                case 'B':
-                    Console.WriteLine("Very Good");
-                    break;
-
-                case 'C':
-                    Console.WriteLine("Good");
-                    break;
-
-                case 'D':
-                    Console.WriteLine("Pass");
-                    break;
-
-                case 'F':
-                    Console.WriteLine("Fail");
-                    break;
-
-                default:
-                    Console.WriteLine("Invalid grade");
-                    break;
+                Console.WriteLine("Weather: Cold");
+            }
+            else if (celsius <= 30)
+            {
+                Console.WriteLine("Weather: Mild");
+            }
+            else
+            {
+                Console.WriteLine("Weather: Hot");
             }
 
 
-    }
+
+        }
     }
 }
