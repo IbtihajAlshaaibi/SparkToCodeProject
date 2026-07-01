@@ -266,8 +266,41 @@
                     break;
 
 
+                    ///////////////////////////////////////////////////////////////////////////
+
+                    // Task 11 - Loan Eligibility System
+
+                    Console.Write("Enter your age: ");
+                    int age = int.Parse(Console.ReadLine());
+
+                    Console.Write("Enter your monthly income : ");
+                    double income = double.Parse(Console.ReadLine());
+
+                    Console.Write("Do you have an existing loan? (yes/no): ");
+                    string answer = Console.ReadLine();
+
+                    bool hasLoan = (answer == "yes");
+
+                    if (age >= 21 && age <= 60 && income >= 400 && !hasLoan)
+                    {
+                        Console.WriteLine("You are eligible for the personal loan");
+                    }
+                    else
+                    {
+                        if (age < 21 || age > 60)
+                        {
+                            Console.WriteLine("Not eligible: Age out of range");
+                        }
+                        else if (income < 400)
+                        {
+                            Console.WriteLine("Not eligible: Income is too low");
+                        }
+                        else if (hasLoan)
+                        {
+                            Console.WriteLine("Not eligible: You already have an existing loan");
+                        }
 
 
-            }
-    }
+                    }
+        }
 }
