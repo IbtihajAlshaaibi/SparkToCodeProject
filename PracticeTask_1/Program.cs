@@ -49,21 +49,53 @@
             ///////////////////////////////////////////////////////////////////////////
 
             //Task 4 - Voting Eligibility
-            Console.Write("Enter your age: ");
-            int age = int.Parse(Console.ReadLine());
+            //Console.Write("Enter your age: ");
+            //int age = int.Parse(Console.ReadLine());
 
-            Console.Write("Do you have a valid national ID? (yes/no): ");
-            string answer = Console.ReadLine();
+            //Console.Write("Do you have a valid national ID? (yes/no): ");
+            //string answer = Console.ReadLine();
             
-            if (age >= 18 && answer == "yes")
+            //if (age >= 18 && answer == "yes")
+            //{
+            //    Console.WriteLine("You are eligible to vote");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("You are not eligible to vote");
+            //}
+
+            ///////////////////////////////////////////////////////////////////////////
+
+            //Task 5 - Grade Letter Lookup
+            Console.Write("Enter your grade (A, B, C, D, F): ");
+            char grade = char.Parse(Console.ReadLine());
+
+            switch (grade)
             {
-                Console.WriteLine("You are eligible to vote");
+                case 'A':
+                    Console.WriteLine("Excellent");
+                    break;
+
+                case 'B':
+                    Console.WriteLine("Very Good");
+                    break;
+
+                case 'C':
+                    Console.WriteLine("Good");
+                    break;
+
+                case 'D':
+                    Console.WriteLine("Pass");
+                    break;
+
+                case 'F':
+                    Console.WriteLine("Fail");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid grade");
+                    break;
             }
-            else
-            {
-                Console.WriteLine("You are not eligible to vote");
-            }
-        }
 
 
     }
