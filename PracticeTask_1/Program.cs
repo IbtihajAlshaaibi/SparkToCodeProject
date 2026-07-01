@@ -15,6 +15,9 @@
             //Console.WriteLine("Height: " + height);
             //Console.WriteLine("Student: " + isStudent);
 
+            ///////////////////////////////////////////////////////////////////////////
+
+
             //Task 2 - Rectangle Calculator
             Console.Write("Enter the length of the rectangle: ");
             double length = double.Parse(Console.ReadLine());
@@ -26,10 +29,25 @@
             double perimeter = 2 * (length + width);
 
             Console.WriteLine("Area = " + area);
-            Console.WriteLine("Perimeter = " + perimeter); 
+            Console.WriteLine("Perimeter = " + perimeter);
+
+            ///////////////////////////////////////////////////////////////////////////
+
+            //Task 3 - Even or Odd Checker
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+
+            if (number % 2 == 0)
+            {
+                Console.WriteLine("The number is even.");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd.");
+            }
         }
 
 
-        }
+    }
     }
 }
