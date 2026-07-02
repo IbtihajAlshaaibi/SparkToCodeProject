@@ -6,15 +6,32 @@
 
         {
             // Task 1 - Countdown Timer
-            Console.Write("Enter the starting number: ");
-            int number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter the starting number: ");
+            //int number = int.Parse(Console.ReadLine());
 
-            for (int i = number; i >= 1; i--)
+            //for (int i = number; i >= 1; i--)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //Console.WriteLine("Liftoff!");
+
+
+            //////////////////////////////////////////////////////////////////////////
+
+            // Task 2 - Sum of Numbers 1 to N
+
+            Console.Write("Enter a positive whole number: ");
+            int n = int.Parse(Console.ReadLine());
+
+            int sum = 0;
+
+            for (int i = 1; i <= n; i++)
             {
-                Console.WriteLine(i);
+                sum += i;
             }
 
-            Console.WriteLine("Liftoff!");
+            Console.WriteLine("The sum is: " + sum);
         }
     }
 }
