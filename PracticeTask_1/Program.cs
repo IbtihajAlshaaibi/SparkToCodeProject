@@ -373,36 +373,91 @@
 
                     // Task 13 - Triangle Type Classifier
 
-                    Console.Write("Enter the first side: ");
-                    double side1 = double.Parse(Console.ReadLine());
+                    //Console.Write("Enter the first side: ");
+                    //double side1 = double.Parse(Console.ReadLine());
 
-                    Console.Write("Enter the second side: ");
-                    double side2 = double.Parse(Console.ReadLine());
+                    //Console.Write("Enter the second side: ");
+                    //double side2 = double.Parse(Console.ReadLine());
 
-                    Console.Write("Enter the third side: ");
-                    double side3 = double.Parse(Console.ReadLine());
+                    //Console.Write("Enter the third side: ");
+                    //double side3 = double.Parse(Console.ReadLine());
 
-                    if (side1 + side2 > side3 &&
-                        side1 + side3 > side2 &&
-                        side2 + side3 > side1)
+                    //if (side1 + side2 > side3 &&
+                    //    side1 + side3 > side2 &&
+                    //    side2 + side3 > side1)
+                    //{
+                    //    if (side1 == side2 && side2 == side3)
+                    //    {
+                    //        Console.WriteLine("Triangle Type: Equilateral");
+                    //    }
+                    //    else if (side1 == side2 || side1 == side3 || side2 == side3)
+                    //    {
+                    //        Console.WriteLine("Triangle Type: Isosceles");
+                    //    }
+                    //    else
+                    //    {
+                    //        Console.WriteLine("Triangle Type: Scalene");
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine("The sides do not form a valid triangle");
+                    //}
+
+                    ///////////////////////////////////////////////////////////////////////////
+
+                    // Task 14 - Online Store Checkout
+
+                    Console.Write("Enter product code (1, 2, 3): ");
+                    int productCode = int.Parse(Console.ReadLine());
+
+                    Console.Write("Enter quantity: ");
+                    int quantity = int.Parse(Console.ReadLine());
+
+                    Console.Write("Do you have a discount coupon? (yes/no): ");
+                    string answer = Console.ReadLine();
+
+                    bool hasCoupon = (answer == "yes");
+
+                    double unitPrice = 0;
+                    double subtotal = 0;
+                    double discount = 0;
+                    double tax = 0;
+                    double finalTotal = 0;
+
+                    switch (productCode)
                     {
-                        if (side1 == side2 && side2 == side3)
-                        {
-                            Console.WriteLine("Triangle Type: Equilateral");
-                        }
-                        else if (side1 == side2 || side1 == side3 || side2 == side3)
-                        {
-                            Console.WriteLine("Triangle Type: Isosceles");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Triangle Type: Scalene");
-                        }
+                        case 1:
+                            unitPrice = 8.500;
+                            break;
+
+                        case 2:
+                            unitPrice = 12.000;
+                            break;
+
+                        case 3:
+                            unitPrice = 5.000;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid product code");
+                            return;
                     }
-                    else
+
+                    subtotal = unitPrice * quantity;
+
+                    if (hasCoupon && subtotal > 20)
                     {
-                        Console.WriteLine("The sides do not form a valid triangle");
+                        discount = subtotal * 0.10;
                     }
+
+                    tax = (subtotal - discount) * 0.05;
+                    finalTotal = (subtotal - discount) + tax;
+
+                    Console.WriteLine("Subtotal = " + subtotal + " OMR");
+                    Console.WriteLine("Discount = " + discount + " OMR");
+                    Console.WriteLine("Tax = " + tax + " OMR");
+                    Console.WriteLine("Final Total = " + finalTotal + " OMR");
 
 
             }
