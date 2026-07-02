@@ -103,26 +103,73 @@
 
             // Task 6 - Safe Division Calculator
 
-            try
+            //try
+            //{
+            //    Console.Write("Enter the first number: ");
+            //    int number1 = int.Parse(Console.ReadLine());
+
+            //    Console.Write("Enter the second number: ");
+            //    int number2 = int.Parse(Console.ReadLine());
+
+            //    int result = number1 / number2;
+
+            //    Console.WriteLine("The result is: " + result);
+            //}
+            //catch (DivideByZeroException)
+            //{
+            //    Console.WriteLine("You cannot divide by zero");
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Invalid input. Please enter a valid number");
+
+            //}
+
+            //////////////////////////////////////////////////////////////////////////
+
+            // Task 7 - Repeating Menu with Exit Option
+
+            bool exitDecision = false;
+            int userChoice;
+
+            while (exitDecision == false)
             {
-                Console.Write("Enter the first number: ");
-                int number1 = int.Parse(Console.ReadLine());
+                Console.WriteLine(" MENU ");
+                Console.WriteLine("1. Say Hello");
+                Console.WriteLine("2. Show Current Time-of-day Greeting");
+                Console.WriteLine("3. Exit");
 
-                Console.Write("Enter the second number: ");
-                int number2 = int.Parse(Console.ReadLine());
+                try
+                {
+                    Console.Write("Enter your choice: ");
+                    userChoice = int.Parse(Console.ReadLine());
 
-                int result = number1 / number2;
+                    switch (userChoice)
+                    {
+                        case 1:
+                            Console.WriteLine("Hello..");
+                            break;
 
-                Console.WriteLine("The result is: " + result);
-            }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine("You cannot divide by zero");
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Invalid input. Please enter a valid number");
+                        case 2:
+                            Console.WriteLine("Good Morning..");
+                            break;
 
+                        case 3:
+                            Console.WriteLine("Exiting the program...");
+                            exitDecision = true;
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid choice..");
+                            break;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid input. Please enter a number.");
+                }
+
+                Console.WriteLine();
             }
 
 
