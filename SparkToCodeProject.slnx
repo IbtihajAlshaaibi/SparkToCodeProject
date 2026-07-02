@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="CsharpSession1/CsharpSession1.csproj" />
+  <Project Path="CsharpSession2/CsharpSession2.csproj" Id="6794eec0-01e3-493f-8f3b-42aabca075bf" />
 </Solution>
