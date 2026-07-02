@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="CsharpSession1/CsharpSession1.csproj" />
   <Project Path="CsharpSession2/CsharpSession2.csproj" Id="6794eec0-01e3-493f-8f3b-42aabca075bf" />
+  <Project Path="Practice Task  - Session 2/Practice Task  - Session 2.csproj" Id="3b54985d-b0b0-41ac-a80b-876054d67c8d" />
 </Solution>
