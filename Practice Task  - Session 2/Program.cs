@@ -196,42 +196,171 @@
 
             // Task 9 - Validated Positive Number Input
 
-            int number = 0;
-            bool valid = false;
+            //int number = 0;
+            //bool valid = false;
 
-            do
+            //do
+            //{
+            //    try
+            //    {
+            //        Console.Write("Enter a positive whole number: ");
+            //        number = int.Parse(Console.ReadLine());
+
+            //        if (number <= 0)
+            //        {
+            //            Console.WriteLine("Please enter a number greater than 0.");
+            //            valid = false;
+            //        }
+            //        else
+            //        {
+            //            valid = true;
+            //        }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        Console.WriteLine("Invalid input. Please enter a valid whole number.");
+            //        valid = false;
+            //    }
+
+            //} while (valid == false);
+
+            //int sum = 0;
+
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    sum = sum + i;
+            //}
+
+            //Console.WriteLine("The sum is: " + sum);
+
+
+
+            //////////////////////////////////////////////////////////////////////////
+
+            //Task 10 - Simple ATM Simulation
+
+            int correctPin = 1234;
+            int pin;
+            int attempts = 0;
+            bool access = false;
+
+            while (attempts < 3)
             {
                 try
                 {
-                    Console.Write("Enter a positive whole number: ");
-                    number = int.Parse(Console.ReadLine());
+                    Console.Write("Enter PIN: ");
+                    pin = int.Parse(Console.ReadLine());
 
-                    if (number <= 0)
+                    if (pin == correctPin)
                     {
-                        Console.WriteLine("Please enter a number greater than 0.");
-                        valid = false;
+                        access = true;
+                        break;
                     }
                     else
                     {
-                        valid = true;
+                        Console.WriteLine("Wrong PIN");
                     }
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Invalid input. Please enter a valid whole number.");
-                    valid = false;
+                    Console.WriteLine("Invalid PIN");
                 }
 
-            } while (valid == false);
-
-            int sum = 0;
-
-            for (int i = 1; i <= number; i++)
-            {
-                sum = sum + i;
+                attempts++;
             }
 
-            Console.WriteLine("The sum is: " + sum);
+            if (access == false)
+            {
+                Console.WriteLine("Card Blocked");
+                return;
+            }
+
+            double balance = 100.000;
+            int choice;
+
+            while (true)
+            {
+                Console.WriteLine("1. Deposit");
+                Console.WriteLine("2. Withdraw");
+                Console.WriteLine("3. Check Balance");
+                Console.WriteLine("4. Exit");
+
+                try
+                {
+                    Console.Write("Choose option: ");
+                    choice = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid choice");
+                    continue;
+                }
+
+                switch (choice)
+                {
+                    case 1:
+                        try
+                        {
+                            Console.Write("Enter deposit amount: ");
+                            double deposit = double.Parse(Console.ReadLine());
+
+                            if (deposit <= 0)
+                            {
+                                Console.WriteLine("Invalid amount");
+                            }
+                            else
+                            {
+                                balance += deposit;
+                                Console.WriteLine("Deposit successful");
+                                Console.WriteLine("Balance: " + balance);
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Invalid amount");
+                        }
+                        break;
+
+                    case 2:
+                        try
+                        {
+                            Console.Write("Enter withdraw amount: ");
+                            double withdraw = double.Parse(Console.ReadLine());
+
+                            if (withdraw <= 0)
+                            {
+                                Console.WriteLine("Invalid amount");
+                            }
+                            else if (withdraw > balance)
+                            {
+                                Console.WriteLine("Insufficient balance");
+                            }
+                            else
+                            {
+                                balance -= withdraw;
+                                Console.WriteLine("Withdraw successful");
+                                Console.WriteLine("Balance: " + balance);
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Invalid amount");
+                        }
+                        break;
+
+                    case 3:
+                        Console.WriteLine("Balance: " + balance);
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Goodbye");
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid option");
+                        break;
+                }
+            }
 
 
         }
