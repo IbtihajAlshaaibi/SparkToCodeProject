@@ -176,21 +176,62 @@
 
             // Task 8 - Sum of Even Numbers Only
 
-            int number;
-            int sum = 0;
+            //int number;
+            //int sum = 0;
 
-            Console.Write("Enter a positive whole number: ");
-            number = int.Parse(Console.ReadLine());
+            //Console.Write("Enter a positive whole number: ");
+            //number = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= number; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        sum = sum + i;
+            //    }
+            //}
+
+            //Console.WriteLine("The sum of even numbers is: " + sum);
+
+            //////////////////////////////////////////////////////////////////////////
+
+            // Task 9 - Validated Positive Number Input
+
+            int number = 0;
+            bool valid = false;
+
+            do
+            {
+                try
+                {
+                    Console.Write("Enter a positive whole number: ");
+                    number = int.Parse(Console.ReadLine());
+
+                    if (number <= 0)
+                    {
+                        Console.WriteLine("Please enter a number greater than 0.");
+                        valid = false;
+                    }
+                    else
+                    {
+                        valid = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid whole number.");
+                    valid = false;
+                }
+
+            } while (valid == false);
+
+            int sum = 0;
 
             for (int i = 1; i <= number; i++)
             {
-                if (i % 2 == 0)
-                {
-                    sum = sum + i;
-                }
+                sum = sum + i;
             }
 
-            Console.WriteLine("The sum of even numbers is: " + sum);
+            Console.WriteLine("The sum is: " + sum);
 
 
         }
